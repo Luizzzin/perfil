@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 export default function App() {
   return (
     <View style={styles.container}>
-      <LinearGradient colors={['#155576b3', '#46201B', '#161616',  ]} style={styles.bemvindo}>
+      <LinearGradient colors={['#155576b3', '#46201B']} style={styles.bemvindo}>
         <View style={styles.foto}></View>
         <Text style={styles.text}>NomeTrabalhador</Text>
         <Text style={styles.text2}>emailTrabalhador</Text>
@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
   },
   bemvindo: {
     paddingTop: '20%',
-    paddingBottom: '10%',
+    paddingBottom: '2%',
     height: '45%',
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    borderEndEndRadius: 82,
-    borderBottomEndRadius: 82,
+    borderBottomRightRadius: 82,
+    borderBottomLeftRadius: 82,
   },
   text: {
     backgroundColor: 'transparent',
@@ -76,6 +76,4 @@ const styles = StyleSheet.create({
     borderColor: '#fff',
     
 },
-icone:{
-}
 });
