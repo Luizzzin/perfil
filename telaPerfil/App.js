@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TextInput, View, TouchableOpacity, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useFonts } from 'expo-font';
@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={styles.container}
+    >
       <LinearGradient colors={['#155576b3', '#46201B']} style={styles.bemvindo}>
         <View style={styles.foto}></View>
         <Text style={styles.text}>NomeTrabalhador</Text>
@@ -18,7 +19,12 @@ export default function App() {
         </View>
       </LinearGradient>
       <View style={styles.main}>
-
+    <View style={styles.caixinha}></View>
+    <View style={styles.caixinha}></View>
+    <View style={styles.caixinha}></View>
+    <View style={styles.caixinha}></View>
+    <View style={styles.caixinha}></View>
+    <View style={styles.caixinha}></View>
       </View>
       
     </View>
@@ -76,4 +82,20 @@ const styles = StyleSheet.create({
     borderColor: '#fff',
     
 },
+main:{
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems:'center',
+  flexDirection: 'column',
+  width: '100%',
+  height: 'auto',
+  paddingTop: 60,
+}, 
+caixinha:{
+  display:'flex',
+  width: '80%',
+  height: '10%',
+  backgroundColor: 'white',
+  marginBottom: 10,
+}
 });
