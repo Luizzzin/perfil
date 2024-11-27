@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   routinho:{
     width: '70%',
-    height:'28%',
+    height:'31%',
     backgroundColor: '#222222',
     borderRadius: 15,
     borderWidth: 0.1,
