@@ -7,12 +7,19 @@ import { useEffect, useState } from 'react';
 export default function App() {
   return (
     <View style={styles.container}>
-      <LinearGradient colors={['#155576b3', '#231918', '#161616',  ]} style={styles.bemvindo}>
+      <LinearGradient colors={['#155576b3', '#46201B', '#161616',  ]} style={styles.bemvindo}>
         <View style={styles.foto}></View>
         <Text style={styles.text}>NomeTrabalhador</Text>
         <Text style={styles.text2}>emailTrabalhador</Text>
-        <View style={styles.routinho}></View>
+        <View style={styles.routinho}>
+        <Ionicons name="clipboard-outline" size={30} color="white" style={styles.icone} />
+        <Ionicons name="person-outline" size={30} color="white" style={styles.icone} />
+        <Ionicons name="settings-outline" size={30} color="white" style={styles.icone} />
+        </View>
       </LinearGradient>
+      <View style={styles.main}>
+
+      </View>
       
     </View>
   );
@@ -32,6 +39,8 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+    borderEndEndRadius: 82,
+    borderBottomEndRadius: 82,
   },
   text: {
     backgroundColor: 'transparent',
@@ -54,11 +63,19 @@ const styles = StyleSheet.create({
     marginBottom: '5%',
   },
   routinho:{
-    width: '70%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent:'space-around',
+    alignItems: 'center',
+    padding: '1%',
+    width: '72%',
     height:'31%',
     backgroundColor: '#222222',
     borderRadius: 15,
     borderWidth: 0.1,
     borderColor: '#fff',
-}  
+    
+},
+icone:{
+}
 });
