@@ -1,29 +1,19 @@
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { useFonts } from 'expo-font';
 import { useEffect, useState } from 'react';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <LinearGradient colors={['#155576b3', '#46201B']} style={styles.bemvindo}>
-        <Text style={styles.text}>BEM-VINDO!</Text>
-        <Text style={styles.text2}>Faça login para continuar</Text>
+      <LinearGradient colors={['#155576b3', '#231918', '#161616',  ]} style={styles.bemvindo}>
+        <View style={styles.foto}></View>
+        <Text style={styles.text}>NomeTrabalhador</Text>
+        <Text style={styles.text2}>emailTrabalhador</Text>
+        <View style={styles.routinho}></View>
       </LinearGradient>
-      <TextInput
-        style={styles.input}
-        placeholder="DIGITE SEU EMAIL"
-        placeholderTextColor="white"
       
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="DIGITE SUA SENHA"
-        placeholderTextColor="white"
-      />
-      <TouchableOpacity style={styles.botao}>
-        <Text style={styles.botaoTexto}>ACESSAR</Text>
-      </TouchableOpacity>
     </View>
   );
 }
@@ -38,62 +28,37 @@ const styles = StyleSheet.create({
   bemvindo: {
     paddingTop: '20%',
     paddingBottom: '10%',
-    height: '35%',
+    height: '45%',
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    borderBottomRightRadius: 82,
-    borderBottomLeftRadius: 82,
   },
   text: {
     backgroundColor: 'transparent',
-    fontSize: 40,
-    fontFamily: 'poppins',
+    fontWeight:'bold' ,
+    fontSize: 22,
     color: '#fff',
   },
   text2: {
     backgroundColor: 'transparent',
-    fontSize: 20,
+    fontSize: 18,
     color: '#fff',
-    fontFamily: 'light',
-    marginTop: '10%',
+    marginTop: '2%',
+    marginBottom: '5%',
   },
-  input: {
-    backgroundColor: '#161616',
-    width: '85%',
-    borderWidth: 1,
-    height: '9%',
-    color: 'white',
-    borderBottomColor: '#ddd',
-    borderRightColor: 'transparent',
-    borderLeftColor: 'transparent',
-    borderTopColor: 'transparent',
-    marginTop: '12%',
-    fontFamily: 'poppins',
-    fontSize: 12,
+  foto: {
+    width: '33%',
+    aspectRatio: 1,
+    backgroundColor: '#ddd',
+    borderRadius: 9999, 
+    marginBottom: '5%',
   },
-  botao: {
+  routinho:{
     width: '70%',
-    height: '7%',
-    borderWidth: 0.4,
-    borderColor: '#ddd',
-    backgroundColor: 'rgba(119,119,119,1)',
-    borderRadius: 25,
-    marginTop: '15%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: '#fff',
-    shadowOffset: {
-      width: 4,
-      height: 4,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 2,
-    elevation: 4,
-  },
-  botaoTexto: {
-    color: 'white',
-    fontSize: 15,
-    fontFamily: 'poppins',
-  },
+    height:'28%',
+    backgroundColor: '#222222',
+    borderRadius: 15,
+    borderWidth: 0.1,
+    borderColor: '#fff',
+}  
 });
